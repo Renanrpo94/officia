@@ -1,0 +1,119 @@
+main
+    gap: .6em
+
+section
+    display: flex
+    gap: .6em
+    border-bottom: none
+    padding-bottom: 0
+
+    .div-style
+        background-color: var(--responsive-bgcolor)
+        box-shadow: var(--responsive-boxshadow)
+        padding: 2em 1em
+        border-radius: 1em
+
+    .box
+        &-job
+            display: flex
+            flex-direction: column
+            gap: 2em
+            width: 70%
+
+            .user-info
+                display: flex
+                align-items: center
+                justify-content: space-between
+                gap: .75em
+                padding: 1em
+                width: max-content
+                border-radius: 1em
+                background-color: var(--responsive-bgcolor)
+                box-shadow: var(--responsive-boxshadow)
+
+                .profilePicBox>img
+                    width: 36px
+                    height: 36px
+                    vertical-align: middle
+                    border-radius: 50%
+                    object-fit: contain
+
+                .username,
+                .rating
+                    font-size: 1.25em
+
+                    &>span, &>.star
+                        display: inline
+
+            .job-img
+                display: flex
+                justify-content: center
+
+                &>img
+                    object-fit: contain
+                    width: 600px
+                    height: 350px
+
+        &-user
+            display: flex
+            gap: 1em
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            width: 30%
+
+            .price
+                font-weight: 600
+                font-size: 3em
+
+            .cat
+                font-size: 1.5em
+
+            .shipping
+                font-size: 1em
+
+            &>.button-box
+                display: flex
+                flex-direction: column
+                gap: 1em
+
+                &>button
+                    font-size: 1em
+
+    .description
+        display: flex
+        flex-direction: column
+        width: 100%
+
+    .seller
+        display: flex
+        gap: 2em
+        align-items: center
+        width: 100%
+
+        &>.profile>img
+            width: 200px
+            height: 200px
+            vertical-align: middle
+            border-radius: 50%
+            object-fit: contain
+
+        &>.rating
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            >#username2
+                font-size: 5em
+
+            &>.star
+                font-size: 2.25em
+
+    .contact,
+    .stars
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-evenly
+        width: 30%
+        font-size: 1.1em

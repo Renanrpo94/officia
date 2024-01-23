@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css')
+:root
+    --af-white: #F4F5F6
+    --black-blue: #0D1321
+    --black: #080708
+    --purple: #715AFF
+    --button-purple: #a99cff
+    --placeholder-purple: #a99cff86
+    --transparent-purple: #a99cff13
+    --transparent-purple-hover: #a99cff23
+    --transparent-white: rgba(255, 255, 255, 0.2)
+    --alert: #DA2C38
+*
+    margin: 0
+    padding: 0
+    border: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+
+body
+    min-width: 100%
+    min-height: 100vh
+    background-color: var(--black-blue)
+    color: var(--af-white)
+
+    a
+        text-decoration: none
+        color: var(--af-white)
+
+    &::-webkit-scrollbar
+        width: 1em
+
+    &::-webkit-scrollbar-thumb
+        background-color: hsl(0,0%,67%)
+        border: 4px solid var(--black-blue)
+        border-radius: .5em
+
+header
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 1em 2em
+    border-bottom: 1px solid var(--transparent-white)
+
+    .logo
+        flex: 1
+
+        &>a>img
+            width: 10em
+            display: none
+
+    .nav-bar
+        display: flex
+        align-items: center
+        gap: 2em
+        position: relative
+
+    .menu
+        flex: 1
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        gap: 4em
+
+    .light-mode-button
+        cursor: pointer
+
+        & i
+            font-size: 2em
+
+.main-button-style
+    border: 2px solid var(--purple)
+    background-color: transparent
+    color: var(--purple)
+    padding: .75em 2em
+    border-radius: 1.5em
+    transition: .3s
+    font-weight: 600
+    cursor: pointer
+    white-space: nowrap
+
+    &:hover
+        background-color: var(--purple)
+        color: var(--black-blue)
+
+.container
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+main
+    position: relative
+    width: 75%
+    padding: 2em 2em
+    display: flex
+    gap: 2em
+    flex-direction: column
+    justify-content: center
+    overflow: hidden
+
+/* Admin nav */
+.admin-nav
+    display: flex
+    gap: 2em
+
+    .admin-nav-buttons
+        position: relative
+        cursor: pointer
+
+        .admin-nav-drop
+            z-index: 1000
+            list-style: none
+            position: absolute
+            top: 2em
+            right: 50%
+            transform: translate(50%)
+            width: 10em
+            padding: .5em
+            background-color: var(--black-blue)
+            border: 2px solid var(--purple)
+            border-radius: 1em
+            display: none
+            align-items: flex-end
+
+            &.active
+                display: block
+
+section
+    display: none
+
+    &.active
+        display: block
+
+    .title
+        display: flex
+        justify-content: space-between
+        padding-bottom: 1em
+
+/* Table */
+table
+    width: 100%
+    border: 2px solid var(--purple)
+    border-collapse: collapse
+
+    th, td
+        text-align: left
+        border: 2px solid var(--purple)
+        padding: .5em .25em
+
+        &>i
+            font-size: 1.25em
+            cursor: pointer
+
+/* Edit Wrapper */
+.edit-wrapper
+    position: fixed
+    top: 0
+    left: 0
+    backdrop-filter: blur(10px)
+    width: 100%
+    height: 100%
+    display: none
+    align-items: center
+    justify-content: center
+
+    &.active
+        display: flex
+
+    .form-edit
+        position: relative
+        padding: 2em
+        background-color: var(--black-blue)
+        border: 2px solid var(--purple)
+        border-radius: 1em
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        gap: 2em
+
+        .user-info
+            display: flex
+            flex-direction: column
+            gap: 2em
+
+        .input-group
+            display: flex
+            gap: 5em
+
+            .input-box
+                display: flex
+                flex-direction: column
+                gap: .25em
+
+                &>label
+                    color: var(--purple)
+                    font-size: 1.25em
+                    font-weight: 600
+
+                &>input
+                    background-color: transparent !important
+                    border: 2px solid var(--purple)
+                    color: var(--af-white)
+                    border-radius: 1em
+                    outline: none
+                    font-size: 1.125em
+                    font-weight: 600
+                    width: 17em
+                    padding: .25em .5em .25em 1em
+
+        .button-box
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 1em
+
+            &>button
+                width: 100%
+                background-color: transparent
+                color: var(--purple)
+                border: 2px solid var(--purple)
+                border-radius: 2em
+                padding: .5em 0
+                font-size: 1.25em
+                font-weight: 600
+                cursor: pointer
+                transition: .3s
+
+                &:hover
+                    background-color: var(--purple)
+                    color: var(--black-blue)
+
+        .close-edit-wrapper
+            position: absolute
+            right: 0
+            top: 0
+            background-color: var(--purple)
+            border-bottom-left-radius: 1.5em
+            cursor: pointer
+
+            &>i
+                font-size: 2.75em

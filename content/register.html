@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFICIA</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../assets/svg/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/register-style.css">
+    <link rel="stylesheet" href="../assets/css/light-theme-style.css">
+    <link rel="stylesheet" href="../assets/css/login-style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        <div class="mobile-menu-button">
+                <i class='bx bx-menu'></i>
+            </div>    
+            <div class="mobile-menu-box" style="display: none">
+                <div class="mobile-menu">
+                    <div class="mobile-option"><a href="#" class="jobs" id="mobile-login">Login</a></div>
+                    <div class="mobile-option"><a href="../content/register.html">Cadastre-se</a></div>
+                    <div class="mobile-option">
+                        <div class="light-mode-button">
+                            <i class='bx bxs-sun'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="../index.php">
+                    <img class="logotipo" id="logo-dark-mode" src="../assets/svg/officia_logotipo.svg" alt="Logotipo Officia">
+                    <img class="logotipo" id="logo-light-mode" src="../assets/svg/officia_logotipo_light.svg" alt="Logotipo Officia">
+                </a>
+            </div>
+            <div class="mobile-search"><i class='bx bx-search'></i></div>
+            <form action="" class="search-wrapper">
+                <input type="text" placeholder="Faça sua pesquisa">
+                <button><i class='bx bx-search'></i></button>
+            </form>
+            <div class="menu">
+                <nav class="nav-bar">
+                    <a href="#" class="jobs" id="login">Login</a>
+                    <a href="content/register.html" class="main-button-style">Cadastre-se</a>
+                </nav>
+                <div class="light-mode-button">
+                    <i class='bx bxs-sun'></i>
+                </div>
+            </div>
+        </header>
+        <div class="banner">
+            <div class="banner-text">
+                <h2 class="banner-text-h2">Bem-vindo ao
+                    <span>OFFICIA</span>
+                </h2>
+                <p class="banner-text-p">
+                    Seja bem vindo ao Officia! A plataforma onde seus problemas tem solução!
+                </p>
+            </div>
+            <div class="banner-img">
+                <img src="../assets/img/Cadastro.png" alt="Picsum">
+            </div>
+        </div>
+        <main>
+            <section class="register-section">
+                <div class="alert-wrapper">
+                    <div></div>
+                </div>
+                <form id="form-register" action="">
+                    <div class="user-info">
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome" placeholder="Digite seu nome"
+                                    autocomplete="off">
+                            </div>
+                            <div class="input-box">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="cpf">CPF</label>
+                                <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" autocomplete="off">
+                            </div>
+                            <div class="input-box">
+                                <label for="nasc">Data de Nascimento</label>
+                                <input type="date" name="nasc" id="nasc" placeholder="Data de Nascimento"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="cel">Celular</label>
+                                <input type="text" name="cel" id="cel" placeholder="Digite seu celular"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="login-info">
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="email"><i class='bx bxs-envelope'></i> E-mail</label>
+                                <input type="text" name="email" id="email" placeholder="Digite seu e-mail"
+                                    autocomplete="off">
+                            </div>
+                            <div class="input-box">
+                                <label for="confirm-email"><i class='bx bxs-envelope'></i> Confirme seu e-mail</label>
+                                <input type="text" name="confirm-email" id="confirm-email"
+                                    placeholder="Confirme seu e-mail" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="senha"><i class='bx bxs-lock'></i> Senha</label>
+                                <input type="password" name="senha" id="senha" placeholder="Digite sua senha"
+                                    autocomplete="off">
+                            </div>
+                            <div class="input-box">
+                                <label for="confirm-senha"><i class='bx bxs-lock'></i> Confirme sua senha</label>
+                                <input type="password" name="confirm-senha" id="confirm-senha"
+                                    placeholder="Confirme sua senha" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-box">
+                        <div class="terms">
+                            <input type="checkbox" name="terms" id="terms">
+                            <label for="terms">
+                                Li e estou de acordo com o <a href="terms.html">Termos de uso e Política de Privacidade</a>
+                            </label>
+                        </div>
+                        <button type="submit" id="register">Realizar Cadastro</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>&copy 2023 Todos direitos reservados.<div><a href="../content/cronograma.html">Cronôgrama</a></div>
+    </footer>
+
+    <div class="login-wrapper" style="display: none;">
+        <form class="login">
+            <span class="close-login-wrapper">
+                <i class='bx bx-x'></i>
+            </span>
+            <div class="social-login">
+                <div class="social-login-google">
+                    <img src="../assets/svg/google-icon.svg" alt="Google Icon">
+                    <span>Entrar com o Google</span>
+                </div>
+            </div>
+            <div class="login-input-group">
+                <div class="login-input-box">
+                    <label for="email"><i class='bx bxs-envelope'></i> E-mail</label>
+                    <input type="text" name="email-user" id="email-user" placeholder="Digite seu e-mail" autocomplete="off">
+                </div>
+                <div class="login-input-box">
+                    <label for="senha"><i class='bx bxs-lock'></i> Senha</label>
+                    <input type="password" name="senha-user" id="senha-user" placeholder="Digite sua senha" autocomplete="off">
+                </div>
+            </div>
+            <div class="login-button-box">
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="../assets/js/jquery/register-ajax.js"></script>
+<script src="../assets/js/jquery/login-ajax-register.js"></script>
+<script src="../assets/js/login-wrapper.js"></script>
+<script src="../assets/js/light-mode.js"></script>
+<script src="../assets/js/jquery/mobile-menu-button.js"></script>
+
+</html>

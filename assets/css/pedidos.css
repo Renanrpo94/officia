@@ -1,0 +1,143 @@
+main {
+  background-color: var(--responsive-bgcolor);
+  box-shadow: var(--responsive-boxshadow);
+  margin-top: 2em;
+  border-radius: 1em;
+}
+main .pedidos {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .pedidos:last-child {
+  padding-bottom: 0 !important;
+}
+main .pedidos-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2em;
+  padding: 0.5em 1em 0.5em 0.5em;
+  background-color: var(--responsive-bgcolor);
+  box-shadow: var(--responsive-boxshadow);
+  cursor: pointer;
+}
+main .pedidos-list-icon, main .pedidos-list-arrow {
+  display: flex;
+  align-items: center;
+}
+main .pedidos-list-icon > i {
+  font-size: 2em;
+  background-color: var(--responsive-bgcolor);
+  box-shadow: var(--responsive-boxshadow);
+  border-radius: 50%;
+  padding: 0.25em;
+}
+main .pedidos-list-arrow > i {
+  font-size: 2em;
+}
+main .pedidos-list-item {
+  font-size: 1.5em;
+}
+
+/* Wrapper */
+.pedidos-list-wrapper {
+  display: none;
+}
+.pedidos-list-wrapper.active {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pedidos-list-wrapper .wrapper-info {
+  background-color: var(--black-blue);
+  box-shadow: 0px 0px 20px 10px rgba(25, 1, 63, 0.4);
+  padding: 2em;
+  border-radius: 1.5em;
+  width: 1600px;
+  position: relative;
+  overflow: hidden;
+}
+.pedidos-list-wrapper .wrapper-info-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--purple);
+  border-bottom-left-radius: 1.5em;
+  cursor: pointer;
+}
+.pedidos-list-wrapper .wrapper-info-close > i {
+  font-size: 3em;
+}
+.pedidos-list-wrapper .wrapper-info-title {
+  font-size: 1.5em;
+  text-align: center;
+}
+.pedidos-list-wrapper .wrapper-info-box {
+  display: flex;
+}
+.pedidos-list-wrapper .wrapper-info-box-pedido {
+  width: 60%;
+}
+.pedidos-list-wrapper .wrapper-info-box-pedido-title, .pedidos-list-wrapper .wrapper-info-box-pedido-categoria {
+  text-align: center;
+}
+.pedidos-list-wrapper .wrapper-info-box-pedido-imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pedidos-list-wrapper .wrapper-info-box-pedido-imagem > img {
+  height: 500px;
+  width: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.pedidos-list-wrapper .wrapper-info-box-freelancer {
+  width: 40%;
+  display: flex;
+  gap: 5em;
+  flex-direction: column;
+  justify-content: center;
+}
+.pedidos-list-wrapper .wrapper-info-box-freelancer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.pedidos-list-wrapper .wrapper-info-box-freelancer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+  border-radius: 1em;
+  background-color: var(--responsive-bgcolor);
+  box-shadow: var(--responsive-boxshadow);
+}
+.pedidos-list-wrapper .wrapper-info-box-freelancer-container-nome {
+  font-size: 3em;
+  font-weight: 500;
+  max-width: 350px;
+}
+.pedidos-list-wrapper .wrapper-info-box-freelancer-container-imagem {
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+}
+.pedidos-list-wrapper .wrapper-info-box-freelancer-container-email {
+  font-size: 1.5em;
+}
+.pedidos-list-wrapper .wrapper-info-box-freelancer-container-cel {
+  font-size: 1em;
+}

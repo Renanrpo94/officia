@@ -1,0 +1,54 @@
+/* Light Theme*/
+/* Home */
+body.light {
+  background-color: var(--af-white);
+  color: var(--black);
+  --transparent-white: rgba(0, 0, 0, 0.2);
+  /* User */
+  /* Alert wrapper */
+}
+body.light::-webkit-scrollbar-thumb {
+  background-color: var(--black-blue);
+  border: 4px solid var(--af-white);
+}
+body.light a,
+body.light .section-content-text > ul > li > span,
+body.light .section-content-text > h2 > span {
+  color: var(--black);
+}
+body.light input,
+body.light footer > div > a {
+  color: var(--purple);
+}
+body.light .main-button-style {
+  color: var(--purple);
+}
+body.light .main-button-style:hover {
+  color: var(--af-white);
+}
+body.light .h-scroll-item {
+  background-color: var(--placeholder-purple);
+}
+body.light .h-scroll-item:hover {
+  background-color: var(--button-purple);
+}
+body.light .h-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--placeholder-purple);
+  border: 1px solid var(--transparent-purple-hover);
+}
+body.light .h-scroll::-webkit-scrollbar-track {
+  background: var(--placeholder-purple);
+}
+body.light .user-menu {
+  background-color: var(--af-white);
+}
+body.light .alert-wrapper > div {
+  background-color: var(--af-white);
+  color: var(--purple);
+}
+body.light .mobile-menu {
+  background: var(--af-white);
+}
+body.light .mobile-option {
+  background-color: var(--transparent-purple);
+}

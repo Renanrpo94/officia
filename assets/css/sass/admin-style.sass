@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap")
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css")
+:root
+    --af-white: #F4F5F6
+    --black-blue: #0D1321
+    --black: #080708
+    --purple: #715AFF
+    --button-purple: #a99cff
+    --placeholder-purple: #a99cff86
+    --transparent-purple: #a99cff13
+    --transparent-purple-hover: #a99cff23
+    --transparent-white: rgba(255, 255, 255, 0.2)
+    --alert: #DA2C38
+
+*
+    margin: 0
+    padding: 0
+    border: 0
+    box-sizing: border-box
+    font-family: "Poppins", sans-serif
+
+body
+    min-width: 100%
+    min-height: 100%
+    background-color: var(--black-blue)
+    color: var(--af-white)
+
+.container
+    width: 100%
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .login
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 2em
+        border-radius: 1em
+        border: 2px solid var(--purple)
+        padding: 2em
+
+        .input-box
+            display: flex
+            flex-direction: column
+            gap: .25em
+
+            &>input
+                width: 17em
+                padding: .5em
+                font-size: 1.125em
+                font-weight: 600
+                outline: none
+                background-color: var(--transparent-purple)
+                border: 2px solid var(--purple)
+                color: var(--af-white)
+                border-radius: .5em
+
+                &::placeholder
+                    color: var(--placeholder-purple)
+                    font-weight: 500
+
+            &>label
+                font-size: 1.25em
+                font-weight: 600
+                color: var(--purple)
+
+        &>button
+            background-color: transparent
+            color: var(--purple)
+            border: 2px solid var(--purple)
+            border-radius: .5em
+            font-size: 1.5em
+            font-weight: 600
+            padding: .5em 4.75em
+            cursor: pointer
+            transition: .3s
+
+            &:hover
+                background-color: var(--purple)
+                color: var(--black-blue)
+
+.alert-wrapper
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: none
+    align-items: center
+    justify-content: center
+    padding: 1em 0
+    z-index: 100
+
+    &>div
+        background-color: var(--black-blue)
+        border: 2px solid var(--alert)
+        border-radius: 1em
+        padding: 1em 2em
+        font-weight: 600
+        font-size: 1.25em

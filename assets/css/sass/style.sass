@@ -1,0 +1,517 @@
+/* Imported Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap')
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css')
+
+/* Color Palette */
+:root
+    --af-white: #F4F5F6
+    --black-blue: #0D1321
+    --black: #080708
+    --purple: #715AFF
+    --button-purple: #a99cff
+    --placeholder-purple: #a99cff86
+    --transparent-purple: #a99cff13
+    --transparent-purple-hover: #a99cff23
+    --transparent-white: rgba(255, 255, 255, 0.2)
+    --responsive-boxshadow: 0px 3px 4px 0px hsla(0,0%,0%,0.14), 0px 3px 3px -2px hsla(0,0%,0%,0.12), 0px 1px 8px 0px hsla(0,0%,0%,0.2)
+    --responsive-bgcolor:hsla(0, 100%, 100%, 0.08)
+    --alert: #DA2C38
+
+/* standarlizing the page */
+*
+    margin: 0
+    padding: 0
+    border: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+
+body
+    min-width: 100%
+    min-height: 100vh
+    background-color: var(--black-blue)
+    color: var(--af-white)
+
+    a 
+        text-decoration: none
+        color: var(--af-white)
+
+    &::-webkit-scrollbar
+        width: 1em
+
+    &::-webkit-scrollbar-thumb
+        background-color: hsl(0,0%,67%)
+        border: 4px solid var(--black-blue)
+        border-radius: .5em
+
+/* Header */
+header
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 1em 2em
+    border-bottom: 1px solid var(--transparent-white)
+
+    .logo
+        flex: 1
+
+        &>a>img
+            width: 10em
+            display: none
+
+    .search-wrapper
+        display: flex
+        align-items: center
+        border: 2px solid var(--purple)
+        min-width: 30em
+        padding: .5em 1em .5em 2em
+        border-radius: 5em
+        flex: 1
+
+        & input
+            background-color: transparent
+            outline: none
+            flex: 4
+            font-weight: 600
+            font-size: 1.125em
+            padding-right: .5em
+            color: var(--af-white)
+
+            &::placeholder
+                color: var(--placeholder-purple)
+
+        & button
+            background-color: var(--button-purple)
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 3em
+            height: 3em
+            border-radius: 100%
+
+            & i
+                color: var(--black-blue)
+                font-size: 2em
+
+    .menu
+        flex: 1
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        gap: 4em
+
+    .nav-bar
+        display: flex
+        align-items: center
+        gap: 2em
+        position: relative
+
+    .jobs
+        transition: .3s
+
+        &:hover
+            color: var(--purple)
+
+    .light-mode-button
+        cursor: pointer
+
+        & i
+            font-size: 2em
+
+    .mobile-menu-button
+        display: none
+
+    .mobile-search
+        display: none
+
+    .mobile-user
+        display: none
+
+.container
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    /* Banner */
+    .banner
+        width: 75%
+        padding: 2em 0
+        display: flex
+        gap: 5em
+        align-items: center
+        justify-content: center
+        border-bottom: 1px solid var(--transparent-white)
+
+        &-text            
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 2em
+            flex-direction: column
+            flex: 1
+
+        &-text-h2
+            font-size: 3em
+            margin-bottom: -23px
+
+        &-text-h2 span
+            color: var(--purple)
+
+        &-text-p
+            font-size: 1.125em
+            text-align: center
+            width: 75%
+
+        &-img
+            flex: 1
+            display: flex
+            justify-content: center
+
+            img
+                width: 800px
+/* Main */
+main
+    width: 75%
+    padding: 2em 2em
+    display: flex
+    gap: 2em
+    flex-direction: column
+    justify-content: center
+
+    /* Horizontal scroll */
+    .h-scroll-wrapper
+        h2
+            display: flex
+            justify-content: center
+
+        .h-scroll
+            display: flex
+            gap: 2em
+            overflow-x: auto
+            padding: 1em 2em
+
+            &-item
+                text-align: center
+                cursor: pointer
+                background-color: var(--transparent-purple)
+                padding: 1em .75em .75em .75em
+                border-radius: .625em
+                transition: .3s
+
+                img
+                    width: 200px
+                    height: 200px
+
+            &-item:hover
+                background-color: var(--transparent-purple-hover)
+                transform: scale(1.05)
+
+            &::-webkit-scrollbar
+                height: 1em
+
+            &::-webkit-scrollbar-thumb
+                background-color: var(--transparent-purple-hover)
+                border: 1px solid var(--transparent-purple)
+                border-radius: 2em
+
+            &::-webkit-scrollbar-track
+                background: var(--transparent-purple)
+                border-radius: 2em
+
+/* Section */
+section
+    border-bottom: 1px solid var(--transparent-white)
+    padding-bottom: 2em
+
+    &:last-child
+        border-bottom: none
+
+.section-content
+    display: flex
+    gap: 3em
+
+    &-img
+        flex: 1
+
+    &-text
+        flex: 3
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 1.5em
+
+        & h2
+            color: var(--purple)
+
+            & span
+                color: var(--af-white)
+
+        .plus
+            font-weight: 300
+
+        &>p
+            font-size: 1.125em
+        
+        &>ul>li
+            color: var(--purple)
+
+            &>span
+                color: var(--af-white)
+
+/* Footer */
+footer
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 1em 2em
+    border-top: 1px solid var(--transparent-white)
+
+    &>div>a
+        color: var(--purple)
+    
+        &:hover
+            text-decoration: underline
+
+/* Estilo botoes */
+.main-button-style
+    border: 2px solid var(--purple)
+    background-color: transparent
+    color: var(--purple)
+    padding: .75em 2em
+    border-radius: 1.5em
+    transition: .3s
+    font-weight: 600
+    cursor: pointer
+    white-space: nowrap
+
+    &:hover
+        background-color: var(--purple)
+        color: var(--black-blue)
+
+.alert-wrapper
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: none
+    align-items: center
+    justify-content: center
+    padding: 1em 0
+    z-index: 100
+    
+    &>div
+        background-color: var(--black-blue)
+        border: 2px solid var(--alert)
+        border-radius: 1em 
+        padding: 1em 2em
+        font-weight: 600
+        font-size: 1.25em
+
+/* Iframe */
+.iframe-login
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+
+@media(max-width: 1280px)
+    header
+        width: 100%
+
+        .logo
+            flex: 0
+            margin-right: 1em
+        
+        .menu
+            justify-content: space-evenly
+            gap: .5em
+
+            .nav-bar
+                scale: 90%
+                gap: 1em
+
+
+@media(max-width: 1024px)
+    header
+        width: 100%
+
+@media(max-width: 768px)
+
+    .container
+        width: 100%
+
+    /* header */
+    header
+        width: 100%
+        height: 50% !important
+
+        .logo
+            display: flex
+            justify-content: center
+            flex: 1
+            margin-right: 0
+
+        .search-wrapper 
+            display: none
+
+        .menu
+            display: none
+
+            .nav-bar
+                scale: 100%
+                gap: 0
+
+        .mobile-menu-button
+            display: flex
+            align-items: flex-start
+            font-size: 3em
+
+        .mobile-search
+            display: flex
+            align-items: flex-end
+            font-size: 2.40em
+
+        .mobile-menu-box
+            display: block
+            position: fixed
+            top:0
+            right:0
+            bottom:0
+            left:0
+            z-index:9
+
+        .mobile-menu
+            width: 100%
+            height: auto
+            display: flex
+            flex-direction: column
+            text-align: left
+            background: var(--black-blue)
+            box-shadow: var(--responsive-boxshadow)
+            margin-top: 81px
+            position: absolute
+
+        .mobile-option
+            background-color: var(--responsive-bgcolor)
+            box-shadow: var(--responsive-boxshadow)
+            padding: 5px
+            margin: 5px            
+            border-radius: 15px
+            display: inline-flex
+            justify-content: center
+            align-items: center
+
+    .banner
+        width: 100% !important
+
+        &-text-p
+            width: 85% !important
+            text-align: center
+
+    main
+        width: 100% !important
+
+    .h-scroll
+        width: 100%
+
+        .h-scroll-item
+            text-align: center
+            min-width: 224px
+            max-height: 224px
+
+            h3
+                margin: 0 auto
+                padding: 33px 0
+
+            img
+                height: 50%
+
+        &::-webkit-scrollbar,
+        &::-webkit-scrollbar-thumb,
+        &::-webkit-scrollbar-track
+            display: none
+
+    .section-content
+        width: 100% !important
+        margin-left: auto
+        margin-right: auto
+        padding-left: 0.5rem
+        padding-right: 0.5rem
+                
+    img
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        padding-left: 0.5rem
+        padding-right: 0.5rem
+
+
+@media(max-width: 640px)
+
+    header
+        width: 100%
+
+        .search-wrapper 
+            display: none !important
+
+    .banner
+        width: 100% !important
+
+        &-text-h2
+            font-size: 2em !important
+            margin-bottom: 0
+            text-align: center
+
+        &-text-p
+            width: 85% !important
+            text-align: center
+
+        .menu
+            display: none
+
+@media(max-width: 475px)
+
+    header
+        width: 100%
+
+        .search-wrapper 
+            display: none !important
+
+        .menu
+            display: none
+
+    .section-content
+        width: 100%
+        display: block
+
+        &-text
+            text-align: center
+
+
+
+@media(max-width: 375px)
+
+    header
+        width: 100%
+
+        .search-wrapper 
+            display: none !important
+
+        .menu
+            display: none
+
+    .section-content
+        width: 100%
+        display: block
+
+        &-text
+            text-align: center
+
+        &-img
+            display: none

@@ -1,0 +1,119 @@
+.login-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.login {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black-blue);
+    position: relative;
+    border-radius: 1.5em;
+    overflow: hidden;
+    padding: 2em 1em;
+    box-shadow: 0px 0px 20px 10px rgba(25, 1, 63, 0.4);
+}
+
+.close-login-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--purple);
+    border-bottom-left-radius: 1.5em;
+    cursor: pointer;
+}
+
+.close-login-wrapper>i {
+    font-size: 2.75em;
+}
+
+.social-login-google {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    padding: .5em;
+    border: 3px solid var(--transparent-purple-hover);
+    border-radius: .5em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.social-login-google:hover {
+    border: 3px solid var(--purple);
+}
+
+.social-login-google>img {
+    width: 2em;
+}
+
+.social-login-google>span {
+    color: var(--button-purple);
+    font-weight: 600;
+}
+
+.login-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.login-input-box {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+}
+
+.login-input-box>input {
+    width: 17em;
+    padding: .5em;
+    font-size: 1.125em;
+    font-weight: 600;
+    outline: none;
+    background-color: var(--transparent-purple);
+    border: 2px solid var(--purple);
+    color: var(--af-white);
+    border-radius: .5em;
+}
+
+.login-input-box>input::placeholder {
+    color: var(--placeholder-purple);
+    font-weight: 500;
+}
+
+.login-input-box>label {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--purple);
+}
+
+.login-input-box>label>i {
+    color: var(--button-purple);
+}
+
+.login-button-box>button {
+    background-color: transparent;
+    color: var(--purple);
+    border: 2px solid var(--purple);
+    border-radius: .5em;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: .5em 4.75em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-button-box>button:hover {
+    background-color: var(--purple);
+    color: var(--black-blue);
+}

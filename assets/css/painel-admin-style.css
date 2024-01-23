@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+:root {
+  --af-white: #F4F5F6;
+  --black-blue: #0D1321;
+  --black: #080708;
+  --purple: #715AFF;
+  --button-purple: #a99cff;
+  --placeholder-purple: #a99cff86;
+  --transparent-purple: #a99cff13;
+  --transparent-purple-hover: #a99cff23;
+  --transparent-white: rgba(255, 255, 255, 0.2);
+  --alert: #DA2C38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: var(--black-blue);
+  color: var(--af-white);
+}
+body a {
+  text-decoration: none;
+  color: var(--af-white);
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 67%);
+  border: 4px solid var(--black-blue);
+  border-radius: 0.5em;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1em 2em;
+  border-bottom: 1px solid var(--transparent-white);
+}
+header .logo {
+  flex: 1;
+}
+header .logo > a > img {
+  width: 10em;
+  display: none;
+}
+header .nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+}
+header .menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4em;
+}
+header .light-mode-button {
+  cursor: pointer;
+}
+header .light-mode-button i {
+  font-size: 2em;
+}
+
+.main-button-style {
+  border: 2px solid var(--purple);
+  background-color: transparent;
+  color: var(--purple);
+  padding: 0.75em 2em;
+  border-radius: 1.5em;
+  transition: 0.3s;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.main-button-style:hover {
+  background-color: var(--purple);
+  color: var(--black-blue);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  width: 75%;
+  padding: 2em 2em;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Admin nav */
+.admin-nav {
+  display: flex;
+  gap: 2em;
+}
+.admin-nav .admin-nav-buttons {
+  position: relative;
+  cursor: pointer;
+}
+.admin-nav .admin-nav-buttons .admin-nav-drop {
+  z-index: 1000;
+  list-style: none;
+  position: absolute;
+  top: 2em;
+  right: 50%;
+  transform: translate(50%);
+  width: 10em;
+  padding: 0.5em;
+  background-color: var(--black-blue);
+  border: 2px solid var(--purple);
+  border-radius: 1em;
+  display: none;
+  align-items: flex-end;
+}
+.admin-nav .admin-nav-buttons .admin-nav-drop.active {
+  display: block;
+}
+
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+section .title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border: 2px solid var(--purple);
+  border-collapse: collapse;
+}
+table th, table td {
+  text-align: left;
+  border: 2px solid var(--purple);
+  padding: 0.5em 0.25em;
+}
+table th > i, table td > i {
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+/* Edit Wrapper */
+.edit-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.edit-wrapper.active {
+  display: flex;
+}
+.edit-wrapper .form-edit {
+  position: relative;
+  padding: 2em;
+  background-color: var(--black-blue);
+  border: 2px solid var(--purple);
+  border-radius: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.edit-wrapper .form-edit .user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.edit-wrapper .form-edit .input-group {
+  display: flex;
+  gap: 5em;
+}
+.edit-wrapper .form-edit .input-group .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+.edit-wrapper .form-edit .input-group .input-box > label {
+  color: var(--purple);
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.edit-wrapper .form-edit .input-group .input-box > input {
+  background-color: transparent !important;
+  border: 2px solid var(--purple);
+  color: var(--af-white);
+  border-radius: 1em;
+  outline: none;
+  font-size: 1.125em;
+  font-weight: 600;
+  width: 17em;
+  padding: 0.25em 0.5em 0.25em 1em;
+}
+.edit-wrapper .form-edit .button-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.edit-wrapper .form-edit .button-box > button {
+  width: 100%;
+  background-color: transparent;
+  color: var(--purple);
+  border: 2px solid var(--purple);
+  border-radius: 2em;
+  padding: 0.5em 0;
+  font-size: 1.25em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.edit-wrapper .form-edit .button-box > button:hover {
+  background-color: var(--purple);
+  color: var(--black-blue);
+}
+.edit-wrapper .form-edit .close-edit-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--purple);
+  border-bottom-left-radius: 1.5em;
+  cursor: pointer;
+}
+.edit-wrapper .form-edit .close-edit-wrapper > i {
+  font-size: 2.75em;
+}

@@ -1,0 +1,30 @@
+.user-menu {
+  z-index: 1000;
+  position: absolute;
+  top: 4em;
+  right: 0;
+  width: 200px;
+  padding: 1em;
+  background-color: var(--black-blue);
+  border: 2px solid var(--purple);
+  border-radius: 1.5em;
+  display: none;
+}
+.user-menu > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5em;
+}
+.user-menu > ul > li > a {
+  transition: 0.3s;
+}
+.user-menu > ul > li > a:hover {
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}

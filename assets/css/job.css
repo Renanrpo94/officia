@@ -1,0 +1,126 @@
+main {
+  gap: 0.6em;
+}
+
+section {
+  display: flex;
+  gap: 0.6em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+section .div-style {
+  background-color: var(--responsive-bgcolor);
+  box-shadow: var(--responsive-boxshadow);
+  padding: 2em 1em;
+  border-radius: 1em;
+}
+section .box-job {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 70%;
+}
+section .box-job .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75em;
+  padding: 1em;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 1em;
+  background-color: var(--responsive-bgcolor);
+  box-shadow: var(--responsive-boxshadow);
+}
+section .box-job .user-info .profilePicBox > img {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .box-job .user-info .username,
+section .box-job .user-info .rating {
+  font-size: 1.25em;
+}
+section .box-job .user-info .username > span, section .box-job .user-info .username > .star,
+section .box-job .user-info .rating > span,
+section .box-job .user-info .rating > .star {
+  display: inline;
+}
+section .box-job .job-img {
+  display: flex;
+  justify-content: center;
+}
+section .box-job .job-img > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 600px;
+  height: 350px;
+}
+section .box-user {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+section .box-user .price {
+  font-weight: 600;
+  font-size: 3em;
+}
+section .box-user .cat {
+  font-size: 1.5em;
+}
+section .box-user .shipping {
+  font-size: 1em;
+}
+section .box-user > .button-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+section .box-user > .button-box > button {
+  font-size: 1em;
+}
+section .description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section .seller {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  width: 100%;
+}
+section .seller > .profile > img {
+  width: 200px;
+  height: 200px;
+  vertical-align: middle;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .seller > .rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .seller > .rating > #username2 {
+  font-size: 5em;
+}
+section .seller > .rating > .star {
+  font-size: 2.25em;
+}
+section .contact,
+section .stars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  font-size: 1.1em;
+}

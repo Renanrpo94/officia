@@ -1,0 +1,59 @@
+/* Light Theme*/
+    
+/* Home */
+body.light
+    background-color: var(--af-white)
+    color: var(--black)
+
+    &::-webkit-scrollbar-thumb
+        background-color: var(--black-blue)
+        border: 4px solid var(--af-white)
+
+    & a,
+    .section-content-text>ul>li>span,
+    .section-content-text>h2>span
+        color: var(--black)
+
+    & input,
+    footer>div>a
+        color: var(--purple)
+
+    & .main-button-style
+        color: var(--purple)
+
+        &:hover
+            color: var(--af-white)
+
+    & .h-scroll
+
+        &-item
+            background-color: var(--placeholder-purple)
+
+            &:hover
+                background-color: var(--button-purple)
+
+        &::-webkit-scrollbar-thumb
+            background-color: var(--placeholder-purple)
+            border: 1px solid var(--transparent-purple-hover)
+
+        &::-webkit-scrollbar-track
+            background: var(--placeholder-purple)
+
+    & *
+    --transparent-white: rgba(0, 0, 0, 0.2)
+
+    /* User */
+
+    & .user-menu
+        background-color: var(--af-white)
+
+    /* Alert wrapper */
+    & .alert-wrapper>div
+        background-color: var(--af-white)
+        color: var(--purple)
+
+    .mobile-menu
+        background: var(--af-white)
+
+    .mobile-option
+        background-color: var(--transparent-purple)

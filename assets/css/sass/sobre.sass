@@ -1,0 +1,35 @@
+main
+    background-color: var(--responsive-bgcolor)
+    box-shadow: var(--responsive-boxshadow)
+    margin-top: 2em
+
+    p
+        font-size: 1.25em
+
+    //Integrantes do Grupo
+    .group
+        display: flex
+        flex-direction: column
+
+        &-row
+            display: flex
+            flex-direction: row
+
+            &-item
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                background-color: var(--responsive-bgcolor)
+                box-shadow: var(--responsive-boxshadow)     
+                width: 100%
+                height: 20em
+                gap: .25em
+                border-radius: 3em
+                margin: 1em
+
+                img
+                    width: 200px
+                    height: 200px
+                    border-radius: 50%
+                    box-shadow: var(--responsive-boxshadow)     

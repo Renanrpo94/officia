@@ -1,0 +1,220 @@
+/* trabalhos.php */
+.jobs-section
+    display: flex
+    gap: 10px
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
+    .new-job
+        flex: auto
+        background-color: var( --purple)
+        color: var(--af-white)
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 220px
+        height: 300px
+        padding: 0 1em
+        border-radius: 1em
+        transition: .3s
+        cursor: pointer
+        overflow: hidden
+
+        &:hover
+            transform: scale(1.04)
+
+        &>i
+            font-size: 7em
+
+        &>p
+            font-size: 1.125em
+
+    .job
+        position: relative
+        justify-content: flex-start
+        padding: 2em
+
+        & .desc
+            max-width: 100%
+            word-wrap: break-word
+
+        & .job-buttons
+            position: absolute
+            bottom: 0
+            width: 100%
+            display: flex
+            gap: 6px
+            background-color: var(--black-blue)
+            justify-content: space-between
+            border-top: 6px solid var(--black-blue)
+
+            &>button
+                width: 50%
+                cursor: pointer
+                padding: 1em 0
+                background-color: var(--purple)
+                color: var(--af-white)
+                font-size: 1.125em
+                transition: .3s
+                outline: none
+
+.edit-wrapper
+    display: none
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1001
+    backdrop-filter: blur(10px)
+
+    &.active
+        display: flex
+
+        & .edit-box
+            overflow: hidden
+            position: relative
+            background-color: var(--black-blue)
+            border-radius: 1.5em
+            padding: 2em
+            display: flex
+            gap: 2em
+            flex-direction: column
+            box-shadow: 0px 0px 20px 10px rgba(25, 1, 63, 0.4)
+
+            & .close-login-wrapper
+                position: absolute
+                right: 0
+                top: 0
+                background-color: var(--purple)
+                border-bottom-left-radius: 1.5em
+                cursor: pointer
+
+                &>i
+                    font-size: 2.75em
+
+/* novo-trabalho.php */
+#jobs-register
+    display: flex
+    flex-direction: column
+    gap: 2em
+
+.input-group
+    display: flex
+    flex-direction: column
+    gap: 2em
+
+.title
+    flex-direction: row
+
+.input-box
+    display: flex
+    flex-direction: column
+    gap: 0.25em
+
+    &>label
+        color: var(--purple)
+        font-size: 1.25em
+        font-weight: 600
+
+    &>input
+        background-color: transparent !important
+        border: 2px solid var(--purple)
+        color: var(--af-white)
+        border-radius: 1em
+        outline: none
+        font-size: 1.125em
+        font-weight: 600
+        width: 17em
+        padding: .25em .5em .25em 1em
+
+        &::placeholder
+            color: var(--placeholder-purple)
+            font-weight: 500
+
+    &>textarea
+        background-color: transparent !important
+        border: 2px solid var(--purple)
+        border-radius: 1em
+        color: var(--af-white)
+        outline: none
+        font-size: 1.125em
+        font-weight: 600
+        padding: .25em .5em .25em 1em
+        resize: none
+
+        &::placeholder
+            color: var(--placeholder-purple)
+            font-weight: 500
+
+    &>select
+        background-color: transparent !important
+        border: 2px solid var(--purple)
+        border-radius: 1em
+        color: var(--purple)
+        outline: none
+        font-size: 1.125em
+        font-weight: 600
+        padding: .25em .5em .25em 1em
+
+        &>option
+            background-color: var(--black-blue)
+
+.button-box
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1em
+
+    &>button
+        width: 100%
+        background-color: transparent
+        color: var(--purple)
+        border: 2px solid var(--purple)
+        border-radius: 2em
+        padding: .5em 0
+        font-size: 1.25em
+        font-weight: 600
+        cursor: pointer
+        transition: .3s
+
+        &:hover
+            background-color: var(--purple)
+            color: var(--black-blue)
+
+    &>.terms
+
+        &>input
+            accent-color: var(--purple)
+
+        &>label>a
+            color: var(--purple)
+
+            &:hover
+                text-decoration: underline
+
+body.light
+    .button-box>button:hover
+        color: var(--af-white)
+
+    select>option
+        background-color: var(--af-white)
+
+    textarea
+        color: var(--purple)
+
+    .new-job
+        background-color: var(--black-blue)
+        color: var(--af-white)
+
+    .job-buttons
+        background-color: var(--af-white) !important
+        border-top: 6px solid var(--af-white) !important
+
+        &>button
+            background-color: var(--black-blue) !important
